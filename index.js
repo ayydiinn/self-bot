@@ -11,9 +11,9 @@ app.listen(port, () => console.log(`Example app listening at http://localhost:${
 const Discord  = require('discord.js-self');
 var fs = require('fs');
 const client = new Discord.Client();
-const prefix = "!!"
-const owner = "490519932292038659" 
-const ownername = "-its^Hadi.Az^#1405" 
+const prefix = "Shadow"
+const owner = "807184467680165899" 
+const ownername = "漫 Shadow ᴬˡᵖʰᵃ#1000" 
 
 // ==============================
 
@@ -22,8 +22,8 @@ client.on('ready', () => {
   client.user.setPresence({
     status: 'dnd',
     activity: {
-        name: `${ownername} | ${prefix}help for more informations`,
-        type: 'LISTENING',
+        name: ``,
+        type: '',
     }
   })
 });
@@ -53,7 +53,7 @@ const helpmsg = new Discord.MessageEmbed()
 // =============== Owner Help ===============
 const ownerhelpmsg = new Discord.MessageEmbed()
 .setColor('RANDOM')
-.setAuthor(`Hey ${message.author.username} | SelfBot Owner Help Table`, `${message.author.displayAvatarURL({format: "png", size: 2048})}`, 'http://hadi-az.ir')
+.setAuthor(`Hey ${message.author.username} | SelfBot Owner Help Table`, `${message.author.displayAvatarURL({format: "png", size: 2048})}`, '')
 .setDescription('Only the bot owner can use this commands シ︎')
 .addFields(
   { name: 'Start banning all members', value: `${prefix}ban`, inline: true },
@@ -66,8 +66,8 @@ const ownerhelpmsg = new Discord.MessageEmbed()
 // =============== Invite ===============
 const invmsg = new Discord.MessageEmbed()
 .setColor('RANDOM')
-.setAuthor(`Hey ${message.author.username}`, `${message.author.displayAvatarURL({format: "png", size: 2048})}`, 'http://hadi-az.ir')
-.setDescription('For adding me to your server fill free and send\nYour server link in my **DM**\nAnd i will join quickly')
+.setAuthor(`Hey ${message.author.username}`, `${message.author.displayAvatarURL({format: "png", size: 2048})}`, '')
+.setDescription('')
 .setFooter(`Requested by ${message.author.username} | Coded By ${ownername}`);
 // =============== Ping ===============
 const pingmsg = new Discord.MessageEmbed()
@@ -82,7 +82,7 @@ const pingmsg = new Discord.MessageEmbed()
 // =============== Voice ===============
 const vc_error = new Discord.MessageEmbed()
 .setColor('RANDOM')
-.setTitle('❌ Please Enter Valid `VOICE_ID` ❌')
+.setTitle('')
 .setTimestamp()
 .setFooter(`Requested by ${message.author.username} | Coded By ${ownername}`);
 
@@ -94,25 +94,25 @@ const vc_success = new Discord.MessageEmbed()
 // =============== Bot Avatar ===============
 const av_error = new Discord.MessageEmbed()
 .setColor('RANDOM')
-.setTitle('❌ Please Enter Valid `URL` ❌')
+.setTitle('')
 .setTimestamp()
 .setFooter(`Requested by ${message.author.username} | Coded By ${ownername}`);  
 // =============== Rest Bot ===============
 const reset_start = new Discord.MessageEmbed()
 .setColor('RANDOM')
-.setTitle('✅ Restarting . . . ✅')
+.setTitle('')
 .setTimestamp()
 .setFooter(`Requested by ${message.author.username} | Coded By ${ownername}`);
 
 const reset_end = new Discord.MessageEmbed()
 .setColor('RANDOM')
-.setTitle('✅ Restarted ✅')
+.setTitle('')
 .setTimestamp()
 .setFooter(`Requested by ${message.author.username} | Coded By ${ownername}`);    
 // =============== package ==============
 fs.readFile('./package.json', 'utf8', function(err, contents) {
   const packagemsg = new Discord.MessageEmbed()
-.setAuthor(`Hey ${message.author.username}`, `${message.author.displayAvatarURL({format: "png", size: 2048})}`, 'http://hadi-az.ir')
+.setAuthor(`Hey ${message.author.username}`, `${message.author.displayAvatarURL({format: "png", size: 2048})}`, '')
 .setTitle(':robot: Bot Modules :robot:')
 .setDescription('```json\n' + contents + '\n```')
 .setColor('RANDOM')
@@ -130,14 +130,14 @@ const ownermsg = new Discord.MessageEmbed()
 .setColor('RANDOM')
 .setTitle(`The Bot Owned By ${ownername}`)
 .setURL('http://hadi-az.ir')
-.setAuthor('Hadi.Az', 'https://i.imgur.com/XldJLeI.jpg', 'http://hadi-az.ir/discord')
-.setThumbnail('https://i.imgur.com/vboLdOj.gif')
+.setAuthor('')
+.setThumbnail('')
 .addFields(
-  { name: '**Informations**', value : "Website: http://hadi-az.ir\n Discord Profile¹: http://hadi-az.ir/discord\n Discord Profile²: https://discord.bio/p/hadiaz\n GitHub: https://github.com/hadiazt\n SeTar: https://3tarbot.ir\n"},
+  { name: '**Informations**', value : ""},
   { name: 'Owner Joined Discord:', value: '`2018/9/15 18:25:05`', inline: true },
   { name: 'Verified In:', value: '`2020/9/11 22:35`', inline: true },
 )
-.setImage('https://api.apiflash.com/v1/urltoimage?access_key=117377238a284ea590ceec978600014d&url=https://discord.bio/p/hadiaz')
+.setImage('')
 .setTimestamp()
 .setFooter(`Requested by ${message.author.username} | Coded By ${ownername}`);
 // =============== Avatar ===============
@@ -218,7 +218,7 @@ const mentionmsg = new Discord.MessageEmbed()
   const avchange = AV.shift().toLowerCase();
   const av_success = new Discord.MessageEmbed()
   .setColor('RANDOM')
-  .setTitle('✅ Avatar Successfully Changed To : ✅')
+  .setTitle('')
   .setImage(`${AV}`)
   .setTimestamp()
   .setFooter(`Requested by ${message.author.username} | Coded By ${ownername}`);    
